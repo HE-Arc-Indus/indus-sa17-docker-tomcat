@@ -33,3 +33,18 @@ docker run -it --rm -p 9090:8080 -v C:\temp\docker\tomcat\indus-sa17-docker-tomc
 ```
 
 Tester: http://localhost:9090/user-registration-application-0.0.1-SNAPSHOT/
+
+
+## HelloWorld simple avec java
+
+dossier jarhelloworld
+
+build docker image
+```bash
+docker build -t javahello .
+```
+
+run
+```bash
+docker run javahello
+```
