@@ -1,21 +1,6 @@
 # indus-sp18-docker-tomcat
 simple example for docker + tomcat deployment
 
-
-## HelloWorld simple avec java
-
-dossier jarhelloworld
-
-build docker image
-```bash
-docker build -t javahello .
-```
-
-run
-```bash
-docker run javahello
-```
-
 # Docker
 ## Variante 1: le fichier war est ajouté à l'intérieur de l'image
 
