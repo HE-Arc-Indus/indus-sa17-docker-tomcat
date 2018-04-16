@@ -16,8 +16,8 @@ run
 docker run javahello
 ```
 
-
-## Approche 1: fichier war dans le container
+# Docker
+## Variante 1: le fichier war est ajouté à l'intérieur de l'image
 
 build docker image
 ```bash
@@ -32,7 +32,7 @@ run docker container:
 Tester: http://localhost:8080/user-registration-application-0.0.1-SNAPSHOT/
 
 
-## Approche 2: montage du dossier dist sur le container.
+## Variante 2: montage du dossier dist sur le container au moment du lancement.
 
 build docker image
 ```bash
@@ -50,3 +50,27 @@ docker run -it --rm -p 9090:8080 -v C:\temp\docker\tomcat\indus-sa17-docker-tomc
 
 Tester: http://localhost:9090/user-registration-application-0.0.1-SNAPSHOT/
 
+# Compose
+## Variante 1, from repo: image récupérée depuis un répo
+
+```bash
+docker-compose up
+```
+
+Tester: http://localhost:9090/user-registration-application-0.0.1-SNAPSHOT/
+
+```bash
+docker-compose down
+```
+
+## Variante 2, from dockerfile: image créée depuis le Dockerfile local
+
+```bash
+docker-compose up
+```
+
+Tester: http://localhost:9090/user-registration-application-0.0.1-SNAPSHOT/
+
+```bash
+docker-compose down
+```
